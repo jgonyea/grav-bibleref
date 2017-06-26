@@ -1,0 +1,30 @@
+name: BibleRef
+version: 0.1.0
+description: References Bible passages by version, book, and chapter
+icon: book
+author:
+  name: Jeremy Gonyea
+  email: jeremy.gonyea@gmail.com
+homepage: https://github.com/jgonyea/grav-bibleref
+keywords: grav, plugin, bible
+bugs: https://github.com/jgonyea/grav-bibleref/issues
+docs: https://github.com/jgonyea/grav-bibleref/blob/develop/README.md
+license: MIT
+
+dependencites:
+  - form
+
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool

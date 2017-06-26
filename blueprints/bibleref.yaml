@@ -1,0 +1,35 @@
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            header.bible_references:
+              name: passage
+              type: list
+              style: vertical
+              label: Bible Reference(s)
+              fields:
+
+                .version:
+                  type: select
+                  size: small
+                  label: Bible Version
+                  help: Bible version for external links to biblegateway.com
+                  classes: fancy
+                  options:
+                    ESV: 'ESV'
+                    NIV: 'NIV'
+                    KJV: 'KJV'
+
+                .book:
+                  type: select
+                  label: Book
+                  size: medium
+                  '@data-options': '\Grav\Plugin\BiblerefPlugin::getBookOptions'
+
+                .chapter:
+                  type: select
+                  label: Chapter
+                  size: x-small
+                  '@data-options': ['\Grav\Plugin\BiblerefPlugin::getBookChapterOptions']

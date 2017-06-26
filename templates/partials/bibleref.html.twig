@@ -1,0 +1,14 @@
+{% set passages = header.bible_references %}
+{% if passages %}
+<div class="bible-references">
+    <h2>Bible Passage(s)</h2>
+    <ul>
+        {% for passage in passages %}
+            {% set reference = passage.book ~ '+' ~ passage.chapter %}
+            {% set version = passage.version %}
+            {% set bible_gateway_url = 'https://www.biblegateway.com/passage/?search=' ~ reference ~ '&version=' ~ version %}
+            <li><a href='{{ bible_gateway_url }}' target="_blank">{{ reference|regex_replace('/[+]/',' ') }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

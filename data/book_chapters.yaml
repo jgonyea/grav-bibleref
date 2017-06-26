@@ -1,0 +1,67 @@
+'Old Testament':
+  - { book: { name: Genesis, chapters: 50 } }
+  - { book: { name: Exodus, chapters: 40 } }
+  - { book: { name: Numbers, chapters: 36 } }
+  - { book: { name: Deuteronomy, chapters: 34 } }
+  - { book: { name: Joshua, chapters: 24 } }
+  - { book: { name: Judges, chapters: 21 } }
+  - { book: { name: Ruth, chapters: 4 } }
+  - { book: { name: 1 Samuel, chapters: 31 } }
+  - { book: { name: 2 Samuel, chapters: 24 } }
+  - { book: { name: 1 Kings, chapters: 22 } }
+  - { book: { name: 2 Kings, chapters: 25 } }
+  - { book: { name: 1 Chronicles, chapters: 29 } }
+  - { book: { name: 2 Chronicles, chapters: 36 } }
+  - { book: { name: Ezra, chapters: 10 } }
+  - { book: { name: Nehemiah, chapters: 13 } }
+  - { book: { name: Esther, chapters: 10 } }
+  - { book: { name: Job, chapters: 42 } }
+  - { book: { name: Psalms, chapters: 150 } }
+  - { book: { name: Proverbs, chapters: 31 } }
+  - { book: { name: Ecclesiastes, chapters: 12 } }
+  - { book: { name: Song of Song, chapters: 8 } }
+  - { book: { name: Isaiah, chapters: 66 } }
+  - { book: { name: Jeremiah, chapters: 52 } }
+  - { book: { name: Lamentations, chapters: 5 } }
+  - { book: { name: Ezekiel, chapters: 48 } }
+  - { book: { name: Daniel, chapters: 12 } }
+  - { book: { name: Hosea, chapters: 14 } }
+  - { book: { name: Joel, chapters: 3 } }
+  - { book: { name: Amos, chapters: 9 } }
+  - { book: { name: Obadiah, chapters: 1 } }
+  - { book: { name: Jonah, chapters: 4 } }
+  - { book: { name: Micah, chapters: 7 } }
+  - { book: { name: Nahum, chapters: 3 } }
+  - { book: { name: Habakkuk, chapters: 3 } }
+  - { book: { name: Zephaniah, chapters: 3 } }
+  - { book: { name: Haggai, chapters: 2 } }
+  - { book: { name: Zechariah, chapters: 14 } }
+  - { book: { name: Malachi, chapters: 4 } }
+'New Testament':
+  - { book: { name: Matthew, chapters: 28 } }
+  - { book: { name: Mark, chapters: 16 } }
+  - { book: { name: Luke, chapters: 24 } }
+  - { book: { name: John, chapters: 21 } }
+  - { book: { name: Acts, chapters: 28 } }
+  - { book: { name: Romans, chapters: 16 } }
+  - { book: { name: 1 Corinthians, chapters: 16 } }
+  - { book: { name: 2 Corinthians, chapters: 13 } }
+  - { book: { name: Galatians, chapters: 6 } }
+  - { book: { name: Ephesians, chapters: 6 } }
+  - { book: { name: Philippians, chapters: 4 } }
+  - { book: { name: Colossians, chapters: 4 } }
+  - { book: { name: 1 Thessalonians, chapters: 5} }
+  - { book: { name: 2 Thessalonians, chapters: 3} }
+  - { book: { name: 1 Timothy, chapters: 6 } }
+  - { book: { name: 2 Timothy, chapters: 4 } }
+  - { book: { name: Titus, chapters: 3 } }
+  - { book: { name: Philemon, chapters: 1 } }
+  - { book: { name: Hebrews, chapters: 13 } }
+  - { book: { name: James, chapters: 5 } }
+  - { book: { name: 1 Peter, chapters: 5 } }
+  - { book: { name: 2 Peter, chapters: 3 } }
+  - { book: { name: 1 John, chapters: 5 } }
+  - { book: { name: 2 John, chapters: 1 } }
+  - { book: { name: 3 John, chapters: 1 } }
+  - { book: { name: Jude, chapters: 1 } }
+  - { book: { name: Revelation, chapters: 22 } }
