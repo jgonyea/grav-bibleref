@@ -84,7 +84,12 @@ and the page will display a div with class "bible-references" containing urls to
 
 This project was inspired by Bible Field from Drupal found [here](https://www.drupal.org/project/bible_field).
 
+## Known Issues
+- Currently, the maximum available chapter defaults to 150 instead of following the actual maximum per book.
+
 ## To Do
 
 - Add a default version to the plugin, but allow override per page.
-- Add more available translation versions from BibleGateway.com
+- Add more available translation versions from BibleGateway.com.
+- Follow the per-book max chapter rather than defaulting to the overall maximum of 150.
+- Add verses to reference.
