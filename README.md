@@ -31,34 +31,46 @@ Currently, there are no configuration options.
 ## Usage
 
 ### Adding a reference via Admin
-Add the following code to your theme to add the fields to your content type 'TYPE':
+
+Add the following code to your theme to add the fields to your page type 'TYPE' (e.g. 'default' or 'blog'):
 ```
 
-  /**
-   * Extend page blueprints with bibleref fields.
-   *
-   * @param Event $event
-   */
-  public function onBlueprintCreated(Event $event)
-  {
-    static $inEvent = false;
+    use Grav\Common\Data\Blueprints;
+    use RocketTheme\Toolbox\Event\Event;
 
-    /** @var Data\Blueprint $blueprint */
-    $blueprint = $event['blueprint'];
-    if (!$inEvent && $blueprint->getFilename() == 'TYPE') {
-      $inEvent = true;
-      $blueprints = new Data\Blueprints('user/plugins/bibleref/blueprints/');
-      $extends = $blueprints->get('bibleref');
-      $blueprint->extend($extends, true);
-      $inEvent = false;
+    .
+    .
+    .
+    .
+
+    public static function getSubscribedEvents()
+    {
+        return [
+            'onBlueprintCreated' => ['onBlueprintCreated', 0]
+        ];
     }
-  }
+
+    /**
+     * Extend page blueprints with bibleref fields.
+     *
+     * @param Event $event
+     */
+    public function onBlueprintCreated(Event $event)
+    {
+        $blueprint = $event['blueprint'];
+        if (!$inEvent && $blueprint->getFilename() == 'TYPE') {
+            $blueprints = new Blueprints('user/plugins/bibleref/blueprints/');
+            $extends = $blueprints->get('bibleref');
+            $blueprint->extend($extends, true);
+        }
+    }
 ```
 Add Bible references via the fields and save your content.
 ![Admin Fields](bibleref.png "Admin Fields")
 
-### Adding a reference via Markdown
-Add a Bible references to header similar to below:
+### Adding a reference via Markdown headmatter
+
+Add a Bible references to the header similarly to below:
 ```
 title: New Page Title
 bible_references:
@@ -74,18 +86,20 @@ bible_references:
 ```
  
 ### Displaying references
+
 To display all references on a page in your theme, use the following in your theme's template:
 
 `{% include 'partials/bibleref.html.twig' %}`
 
-and the page will display a div with class "bible-references" containing urls to BibleGateway.com with the selected references.
+and the page will display a div with class "bible-references" containing URLs to BibleGateway.com with the selected references.
 
 ## Credits
 
 This project was inspired by Bible Field from Drupal found [here](https://www.drupal.org/project/bible_field).
 
 ## Known Issues
-- Currently, the maximum available chapter defaults to 150 instead of following the actual maximum per book.
+
+- Similar to the Drupal module, the maximum available chapter defaults to 150 instead of following the actual maximum per book.
 
 ## To Do
 
@@ -93,3 +107,4 @@ This project was inspired by Bible Field from Drupal found [here](https://www.dr
 - Add more available translation versions from BibleGateway.com.
 - Follow the per-book max chapter rather than defaulting to the overall maximum of 150.
 - Add verses to reference.
+- Allow multiple page types to have the reference added.
