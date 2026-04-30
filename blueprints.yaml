@@ -1,5 +1,5 @@
 name: BibleRef
-version: 0.1.1
+version: 0.1.2
 description: References Bible passages by version, book, and chapter
 icon: book
 author:
@@ -12,8 +12,13 @@ docs: https://github.com/jgonyea/grav-bibleref/blob/develop/README.md
 license: MIT
 
 dependencites:
+  - { name: grav, version: '>=1.7.0' }
   - form
 
+compatibility:
+  grav:
+    - '1.7'
+    - '2.0'
 
 form:
   validation: strict
