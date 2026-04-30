@@ -58,7 +58,7 @@ Add the following code to your theme to add the fields to your page type 'TYPE' 
     public function onBlueprintCreated(Event $event)
     {
         $blueprint = $event['blueprint'];
-        if (!$inEvent && $blueprint->getFilename() == 'TYPE') {
+        if ($blueprint->getFilename() == 'TYPE') {
             $blueprints = new Blueprints('user/plugins/bibleref/blueprints/');
             $extends = $blueprints->get('bibleref');
             $blueprint->extend($extends, true);

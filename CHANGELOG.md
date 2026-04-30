@@ -1,3 +1,13 @@
+# v0.1.2
+## 04/29/26
+
+1. [](#new)
+    * Added Grav 2.0 compatibility
+2. [](#improved)
+    * Updated README for usage instructions.
+3. [](#bugfix)
+    *
+
 # v0.1.1
 ## 02/22/2018
 
